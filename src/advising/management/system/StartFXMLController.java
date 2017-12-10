@@ -5,17 +5,22 @@
  */
 package advising.management.system;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.animation.FadeTransition;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+ 
 
 /**
  *
@@ -41,11 +46,14 @@ public class StartFXMLController implements Initializable {
      AdvisingManagementSystem main;
      Stage stage;
      
+    
      public void main(AdvisingManagementSystem main, Stage stage){
          this.main = main;
          this.stage = stage;
      }
     
+      
+     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
        TranslateTransition translateTransition = new TranslateTransition(Duration.seconds(0.5),logoLabel);
@@ -88,6 +96,11 @@ public class StartFXMLController implements Initializable {
                        fadeTransition1.setOnFinished(event4 ->{
                            System.out.println("Application Execution Finished!");
                            main.closeStage();
+                           
+                           
+                           
+                           
+                           
                        });
                    
                    });

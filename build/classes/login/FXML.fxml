@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="402.0" prefWidth="341.0" style="-fx-background-color: #1f9671;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.FXMLController">
+    <stylesheets>
+        <URL value="@fxml.css" />
+    </stylesheets>
+   <children>
+      <Label alignment="CENTER" layoutX="142.0" layoutY="34.0" prefHeight="51.0" prefWidth="57.0" style="-fx-background-color: #fff; -fx-background-radius: 50%;" text="AMS" textFill="#1f9671" wrapText="true">
+         <font>
+            <Font name="Ebrima Bold" size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="82.0" layoutY="154.0" prefHeight="25.0" prefWidth="193.0" promptText="Username" unFocusColor="#1f9671">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField focusColor="WHITE" labelFloat="true" layoutX="82.0" layoutY="201.0" prefHeight="25.0" prefWidth="193.0" promptText="PASSWORD" unFocusColor="#1f9671" />
+      <Label layoutX="129.0" layoutY="92.0" text="Please Login" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXComboBox focusColor="#fcfcfc" labelFloat="true" layoutX="82.0" layoutY="243.0" prefHeight="25.0" prefWidth="193.0" promptText="Select Your Account Type" unFocusColor="#1f9671" />
+      <JFXButton buttonType="RAISED" layoutX="98.0" layoutY="305.0" prefHeight="39.0" prefWidth="138.0" ripplerFill="#81999a" style="-fx-background-color: #2ac5d3;" text="Login" textFill="#f5f5f5" />
+      <Label layoutX="75.0" layoutY="371.0" text="Default Passowrds: a,a | t,t | a,a | s,s" textFill="#ebe9e9" />
+   </children>
+</AnchorPane>

@@ -16,7 +16,7 @@
             <Font name="Candara Bold" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="logoLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="237.0" layoutY="102.0" prefHeight="71.0" prefWidth="69.0" style="-fx-background-color: #fff; -fx-background-radius: 50%;" text="AdM" textAlignment="CENTER" textFill="#179a71" wrapText="true">
+      <Label fx:id="logoLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="237.0" layoutY="102.0" prefHeight="71.0" prefWidth="69.0" style="-fx-background-color: #fff; -fx-background-radius: 50%;" text="AMS" textAlignment="CENTER" textFill="#179a71" wrapText="true">
          <font>
             <Font name="Impact" size="22.0" />
          </font>
