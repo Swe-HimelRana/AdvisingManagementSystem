@@ -22,7 +22,7 @@ import javafx.stage.StageStyle;
  */
 public class AdvisingManagementSystem extends Application {
     
-    Stage stage;
+    static Stage stage;
     
     @Override
     public void start(Stage stage) throws Exception {
@@ -42,14 +42,14 @@ public class AdvisingManagementSystem extends Application {
         
         try {
              FXMLLoader loader = new FXMLLoader(this.getClass().getResource("StartFXML.fxml"));
-             AnchorPane pane = loader.load();
+            Parent root = (Parent) loader.load();
+            /// loading default controller
         
-            StartFXMLController controller = loader.getController();
-            controller.main(this,stage);
-            Scene scene = new Scene(pane);
+            
+            Scene scene = new Scene(root);
             scene.getStylesheets().addAll(this.getClass().getResource("frame.css").toExternalForm());
             stage.setScene(scene);
-             
+            stage.initStyle(StageStyle.UNDECORATED);
             stage.setTitle("Please Wait..");
             stage.show();
         } catch (IOException ex) {
@@ -60,30 +60,18 @@ public class AdvisingManagementSystem extends Application {
     
   
     
-    public void closeStage(){
+    public static void closeStage(){
         
         stage.close();
-        
-        loginWindow();
+    
     }
     
     
        public static void main(String[] args) {
         launch(args);
     }
-
-    private void loginWindow() {
-        try {
-            FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/login/FXML.fxml"));
-            AnchorPane pane = loader.load();           
-            Scene scene = new Scene(pane);
-             
-            stage.setTitle("Please Login First");
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException ex) {
-            Logger.getLogger(AdvisingManagementSystem.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
+   
+ 
+  
 
 }

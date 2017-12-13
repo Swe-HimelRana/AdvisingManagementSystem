@@ -5,3 +5,12 @@
 .mainFxmlClass {
 
 }
+.jfx-snackbar-content{
+    -fx-background-color: red;
+    
+}
+.jfx-snackbar-toast{
+    -fx-text-fill: white;
+    -fx-alignment: center;
+    
+}

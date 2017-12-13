@@ -1,1 +1,3 @@
- 
+#rootPane{
+    -fx-background-radius: 20px;
+}

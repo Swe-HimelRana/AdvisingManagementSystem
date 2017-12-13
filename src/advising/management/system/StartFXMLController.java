@@ -8,13 +8,13 @@ package advising.management.system;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.animation.FadeTransition;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -27,7 +27,7 @@ import javafx.util.Duration;
  * @author Himel Rana
  */
 public class StartFXMLController implements Initializable {
-    
+    static Stage stage = new Stage();
     @FXML
     private Label logoLabel;
 
@@ -43,14 +43,10 @@ public class StartFXMLController implements Initializable {
     @FXML
     private Label appnameLabel;
     
-     AdvisingManagementSystem main;
-     Stage stage;
+   
      
     
-     public void main(AdvisingManagementSystem main, Stage stage){
-         this.main = main;
-         this.stage = stage;
-     }
+      
     
       
      
@@ -94,13 +90,10 @@ public class StartFXMLController implements Initializable {
                        fadeTransition1.play();
                      
                        fadeTransition1.setOnFinished(event4 ->{
-                           System.out.println("Application Execution Finished!");
-                           main.closeStage();
                            
-                           
-                           
-                           
-                           
+                           //System.out.println("complete");
+                           loadLoginPage();
+                           AdvisingManagementSystem.closeStage();
                        });
                    
                    });
@@ -108,6 +101,25 @@ public class StartFXMLController implements Initializable {
                
             });
        });
-    }    
+    }   
+    
+    private void loadLoginPage(){
+        
+        try {
+           FXMLLoader loader =new FXMLLoader(getClass().getResource("/login/FXML.fxml"));  
+           Parent loginRoot = (Parent)loader.load();
+           stage.setTitle("Please Login First");
+           
+           stage.setScene(new Scene(loginRoot));
+           stage.show();
+           
+        } catch (IOException e) {
+            System.out.println("Can't load Login Page");
+        }   
+    }
+    public static void closeLoginWindow(){
+        stage.close();
+    }
+  
     
 }

@@ -12,7 +12,7 @@ public class Admin {
     private SimpleStringProperty username;
     private String password;
     
-    public boolean checkLogin(String username, String password){
+    public static boolean checkLogin(String username, String password){
         return "a".equals(username) && "a".equals(password);
     }
     
